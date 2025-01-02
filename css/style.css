@@ -23,6 +23,7 @@ body > * {
     padding: 15px;
     flex-shrink: 0; /* Impede o footer de encolher */
 }
+
 /* Estilo geral */
 body {
     margin: 0;
@@ -68,8 +69,3 @@ body {
     border-radius: 8px;
 }
 
-/* Footer */
-.footer {
-    background-color: #20ADA9;
-    color: #fff;
-}
