@@ -1,0 +1,75 @@
+/* Layout geral */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Content */
+body > * {
+    flex-shrink: 0;
+}
+
+.article {
+    flex-grow: 1; /* Faz o conteúdo crescer para ocupar o espaço disponível */
+}
+
+/* Footer */
+.footer {
+    background-color: #20ADA9;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    flex-shrink: 0; /* Impede o footer de encolher */
+}
+/* Estilo geral */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Header */
+.header {
+    background-color: #20ADA9;
+    padding: 15px 0;
+}
+
+.header .logo img {
+    height: 50px;
+}
+
+/* Article */
+.article {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.article h2 {
+    color: #20ADA9;
+}
+
+/* Imóvel */
+.property {
+    margin-bottom: 30px;
+}
+
+.property img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.property-info {
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+    background-color: #20ADA9;
+    color: #fff;
+}
