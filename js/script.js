@@ -1,42 +1,42 @@
-// Lista de imóveis
-const properties = [
-    {
-        image: "img/imovel1.jpg",
-        title: "Casa Moderna",
-        description: "Uma linda casa moderna com 3 quartos, 2 banheiros e uma piscina.",
-        price: "R$ 750.000"
-    },
-    {
-        image: "img/imovel2.jpg",
-        title: "Apartamento no Centro",
-        description: "Apartamento espaçoso com 2 quartos e vista para a cidade.",
-        price: "R$ 500.000"
-    },
-    {
-        image: "img/imovel3.jpg",
-        title: "Chácara",
-        description: "Chácara ampla com área verde e espaço para eventos.",
-        price: "R$ 1.200.000"
-    }
-];
-
-// Carregar imóveis no DOM
 document.addEventListener("DOMContentLoaded", () => {
     const propertyList = document.getElementById("property-list");
 
-    properties.forEach(property => {
-        const propertyCard = `
-            <div class="col-md-4">
-                <div class="property">
-                    <img src="${property.image}" alt="${property.title}">
-                    <div class="property-info mt-3">
-                        <h5>${property.title}</h5>
-                        <p>${property.description}</p>
-                        <p><strong>${property.price}</strong></p>
+    // Função para obter os imóveis do localStorage
+    function getImoveis() {
+        const imoveis = localStorage.getItem("imoveis");
+        return imoveis ? JSON.parse(imoveis) : [];
+    }
+
+    // Função para renderizar os imóveis na página inicial
+    function renderImoveis() {
+        const imoveis = getImoveis();
+        propertyList.innerHTML = ""; // Limpa a lista de imóveis
+
+        if (imoveis.length === 0) {
+            propertyList.innerHTML = "<p>Nenhum imóvel encontrado.</p>";
+        } else {
+            imoveis.forEach((imovel) => {
+                const col = document.createElement("div");
+                col.className = "col-md-4 mb-4";
+        
+                col.innerHTML = `
+                    <div class="card h-100">
+                        <img src="${imovel.imagem || 'https://via.placeholder.com/150'}" class="card-img-top" alt="Imagem do imóvel">
+                        <div class="card-body">
+                            <h5 class="card-title">${imovel.local}</h5>
+                            <p class="card-text">${imovel.descricao}</p>
+                            <p class="card-text"><strong>Valor:</strong> R$ ${imovel.preco}</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-        `;
-        propertyList.innerHTML += propertyCard;
-    });
+                `;
+        
+                propertyList.appendChild(col);
+            });
+        }
+    }
+
+    // Chamada inicial para renderizar os imóveis ao carregar a página
+    renderImoveis();
 });
+
+
