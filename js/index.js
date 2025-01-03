@@ -23,9 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="card h-100">
                         <img src="${imovel.imagem || 'https://via.placeholder.com/150'}" class="card-img-top" alt="Imagem do imóvel">
                         <div class="card-body">
-                            <h5 class="card-title">${imovel.local}</h5>
+                          <h5 class="card-title">${imovel.local}</h5>
+                            <p class="card-text">${imovel.local}</p>
                             <p class="card-text">${imovel.descricao}</p>
-                            <p class="card-text"><strong>Valor:</strong> R$ ${imovel.preco}</p>
+                            <p class="card-text"><strong> R$ ${imovel.preco}</strong></p>
+                            <p class="card-text"> 
+                            ${imovel.quartos ? `Quartos: ${imovel.quartos}` : ''}
+                            ${imovel.banheiros ? ` | Banheiros: ${imovel.banheiros}` : ''}
+                            ${imovel.andares ? ` | Andares: ${imovel.andares}` : ''}</p>
                         </div>
                     </div>
                 `;
@@ -38,5 +43,4 @@ document.addEventListener("DOMContentLoaded", () => {
     // Chamada inicial para renderizar os imóveis ao carregar a página
     renderImoveis();
 });
-
-
+// 
