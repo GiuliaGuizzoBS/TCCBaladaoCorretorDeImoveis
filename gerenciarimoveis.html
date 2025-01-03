@@ -21,21 +21,76 @@
 
         <!-- Formulário de Imóveis -->
         <form id="imovel-form" class="mt-4">
+           
+            <div class="mb-3">
+                <label for="local" class="form-label">Título:</label>
+                <input type="text" id="local" name="local" class="form-control" required>
+            </div>
+
+
+
             <div class="mb-3">
                 <label for="local" class="form-label">Local:</label>
                 <input type="text" id="local" name="local" class="form-control" required>
             </div>
-
+        
             <div class="mb-3">
                 <label for="preco" class="form-label">Valor:</label>
                 <input type="number" id="preco" name="preco" class="form-control" required>
             </div>
-
+        
             <div class="mb-3">
                 <label for="descricao" class="form-label">Descrição:</label>
                 <textarea id="descricao" name="descricao" class="form-control" rows="3" required></textarea>
             </div>
 
+
+
+
+            <div class="mb-3">
+                <label for="zona" class="form-label">Zona:</label>
+                <select id="zona" name="zona" class="form-select">
+                    <option value="urbano">Urbano</option>
+                    <option value="rural">Rural</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="condominio" class="form-label">Condomínio:</label>
+                <select id="condominio" name="condominio" class="form-select">
+                    <option value="true">Sim</option>
+                    <option value="false">Não</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="regularizado" class="form-label">Regular:</label>
+                <select id="regularizado" name="regularizado" class="form-select">
+                    <option value="true">Sim</option>
+                    <option value="false">Não</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="financiamento" class="form-label">Financiamento:</label>
+                <select id="financiamento" name="financiamento" class="form-select">
+                    <option value="true">Sim</option>
+                    <option value="false">Não</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="tipocomerc" class="form-label">Tipo de Comércio:</label>
+                <select id="tipocomerc" name="tipocomerc" class="form-select">
+                    <option value="venda">Venda</option>
+                    <option value="aluguel">Aluguel</option>
+                </select>
+            </div>
+            
+
+
+
+        
             <div class="mb-3">
                 <label for="tipo-imovel" class="form-label">Tipo de Imóvel:</label>
                 <select id="tipo-imovel" name="tipo" class="form-select" required>
@@ -45,9 +100,15 @@
                     <option value="predio">Prédio</option>
                 </select>
             </div>
-
+        
+            <!-- Novo campo para upload da imagem -->
+            <div class="mb-3">
+                <label for="imagem" class="form-label">Imagem:</label>
+                <input type="file" id="imagem" name="imagem" class="form-control">
+            </div>
+        
             <div id="campos-especificos" class="mt-3"></div>
-
+        
             <button type="submit" class="btn btn-primary">Salvar</button>
             <button type="button" id="cancelar" class="btn btn-secondary">Cancelar</button>
         </form>
