@@ -64,7 +64,7 @@ function renderListaImoveis() {
 
         li.innerHTML = `
             <div>
-                <h5>${imovel.local}</h5>
+                <h5>${imovel.titulo}</h5>
                 <p>${imovel.descricao}</p>
                 <small><strong>Valor:</strong> R$${imovel.preco}</small>
                 ${imovel.imagem ? `<img src="${imovel.imagem}" alt="Imagem do imóvel" style="max-width: 100px;">` : ''}

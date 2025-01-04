@@ -23,14 +23,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="card h-100">
                         <img src="${imovel.imagem || 'https://via.placeholder.com/150'}" class="card-img-top" alt="Imagem do imóvel">
                         <div class="card-body">
-                          <h5 class="card-title">${imovel.local}</h5>
+                          <h5 class="card-title"><strong>${imovel.titulo}</strong></h5>
                             <p class="card-text">${imovel.local}</p>
                             <p class="card-text">${imovel.descricao}</p>
-                            <p class="card-text"><strong> R$ ${imovel.preco}</strong></p>
-                            <p class="card-text"> 
+                            <p class="card-text-valor"><strong> R$ ${imovel.preco}</strong></p>
+                            <p class="card-text-comodos"> 
                             ${imovel.quartos ? `Quartos: ${imovel.quartos}` : ''}
                             ${imovel.banheiros ? ` | Banheiros: ${imovel.banheiros}` : ''}
                             ${imovel.andares ? ` | Andares: ${imovel.andares}` : ''}</p>
+                            <p class="card-text">${imovel.tamanho}m²</p>
                         </div>
                     </div>
                 `;

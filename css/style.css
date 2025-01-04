@@ -25,10 +25,7 @@ body > * {
 }
 
 
- .lagoacortadaimgs {
-    text-align: center;
- }
-
+ 
 .footer .container {
     display: flex;
     justify-content: space-between; /* Garante o espaçamento uniforme entre as colunas */
@@ -102,9 +99,57 @@ body {
     padding: 20px;
 }
 
+
+#titulosclinha {
+    width: 350px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
 .article h2 {
     color: #20ADA9;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    display: table;
 }
+
+.article .linha {
+    width: 350px;
+    height: 2px;
+    position: absolute;
+    z-index: 1;
+    margin-top: 37px;
+    background-color: #20ADA9;
+}
+
+.article .lagoacortadatitulo {
+    color: #20ADA9;
+    font-weight: bold;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    display: table;
+    padding-left: 15px;
+    padding-right: 15px;
+   
+}
+
+.article .linha2 {
+    width: 350px;
+    height: 2px;
+    position: absolute;
+    z-index: 1;
+    margin-top: 19px;
+    background-color: #20ADA9;
+}
+
+
+
 
 /* Imóvel */
 .property {
@@ -122,4 +167,9 @@ body {
     border-radius: 8px;
 }
 
-
+#property-list .card-text-valor {
+    background-color: #20ADA9;
+    border-radius: 8px;
+    color: #fff;
+    padding-left: 8px;
+}
