@@ -15,53 +15,90 @@ body > * {
     flex-grow: 1; /* Faz o conteúdo crescer para ocupar o espaço disponível */
 }
 
-/* Footer */
+/*Footer */
+
 .footer {
     background-color: #20ADA9;
     color: #fff;
-    text-align: center;
+    text-align: center; /* Garante o alinhamento padrão */
     padding: 15px;
     flex-shrink: 0; /* Impede o footer de encolher */
 }
 
-
- 
+/* Container principal */
 .footer .container {
     display: flex;
-    justify-content: space-between; /* Garante o espaçamento uniforme entre as colunas */
+    justify-content: space-between; /* Espaçamento uniforme entre colunas */
     align-items: center; /* Alinha verticalmente os elementos */
+    flex-wrap: wrap; /* Permite que as colunas fiquem em linhas diferentes em telas menores */
 }
 
+/* Colunas do footer */
 #col-esq-rodape, #col-center-rodape, #col-dir-rodape {
     padding: 15px;
     flex: 1; /* Garante que as colunas tenham a mesma largura */
+    min-width: 250px; /* Define uma largura mínima para cada coluna */
+    text-align: left; /* Alinhamento padrão em telas grandes */
 }
 
+/* Borda entre colunas */
 #col-esq-rodape {
     border-right: 1px solid #fff; /* Linha branca entre col-esq-rodape e col-center-rodape */
 }
 
 #col-center-rodape {
-    
     border-right: 1px solid #fff; /* Linha branca entre col-center-rodape e col-dir-rodape */
 }
 
-
+/* Imagem responsiva */
 .footer .logo img {
     height: 100px;
     width: auto; /* Mantém a proporção da imagem */
 }
 
+/* Direitos autorais centralizados */
 .footer .container.text-center {
     display: flex;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Alinha o texto verticalmente */
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
 .footer #col-esq-rodape .celular {
     text-decoration: none; 
     color: inherit;
+}
+
+/* Ajustes em telas menores */
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column; /* Empilha as colunas verticalmente */
+        align-items: center; /* Centraliza os itens no eixo principal */
+        text-align: center; /* Centraliza o texto em todas as colunas */
+    }
+
+    #col-esq-rodape, #col-center-rodape, #col-dir-rodape {
+        border: none; /* Remove bordas em telas menores */
+        flex: none; /* Remove flex para evitar problemas de largura */
+        text-align: center; /* Centraliza o texto dentro de cada coluna */
+    }
+
+    #col-esq-rodape h4, #col-center-rodape h4{
+        font-weight: bold;
+    }
+
+    #col-esq-rodape h4{
+         text-align: center;
+    }
+
+    #col-esq-rodape p{
+        text-align: center;
+    }
+
+    .footer .logo img {
+        height: 80px; /* Ajusta a altura da imagem em telas menores */
+        margin-right: 20px;
+    }
 }
 
 /* Estilo geral */
