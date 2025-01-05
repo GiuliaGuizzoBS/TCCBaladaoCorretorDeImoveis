@@ -97,7 +97,8 @@ body > * {
 
     .footer .logo img {
         height: 80px; /* Ajusta a altura da imagem em telas menores */
-        margin-right: 20px;
+        margin-left: 20px;
+        justify-content: center;
     }
 }
 
@@ -116,6 +117,7 @@ body {
 
 .header .logo img {
     height: 100px;
+    margin-top: -30px;
 }
 
 .header .menor {
@@ -123,6 +125,72 @@ body {
     float: right;
     margin-top: 10px;
 }
+
+/* Estilos do menu horizontal */
+.nav-menu ul {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os itens do menu */
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Centraliza verticalmente os itens */
+    margin-top: 100px;
+}
+
+.nav-menu .nav-link {
+    color: #fff; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    transition: color 0.3s ease; /* Suaviza a mudança de cor */
+}
+
+.nav-menu .nav-link:hover {
+    color: #222; /* Cor ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: wrap; /* Permite que os itens fiquem em linhas diferentes */
+        text-align: center; /* Centraliza o conteúdo */
+    }
+
+    .logo, .contatonum {
+        display: flex;
+        flex-basis: 100%; /* Ocupa toda a largura */
+        margin-bottom: 10px; /* Espaçamento inferior */
+        order: 1; /* Faz o número de contato aparecer antes do menu */
+    }
+
+    .logo {
+        justify-content: left;
+        align-items: left;
+    }
+
+    .header .logo img {
+        margin-top: 0px;
+    }
+
+    .contatonum {
+        justify-content: right;
+        align-items: right;
+        margin-top: -70px;
+    }
+
+    
+    .nav-menu {
+        flex-basis: 100%; /* Ocupa toda a largura */
+        margin-top: 10px; /* Espaçamento superior */
+        order: 2; /* Coloca o menu abaixo do número de contato */
+    }
+
+    .nav-menu ul {
+        justify-content: center; /* Centraliza o menu horizontalmente */
+        flex-wrap: wrap; /* Permite quebra de linha, se necessário */
+        gap: 10px; /* Reduz o espaçamento entre os itens */
+        margin-top: 20px;
+    }
+}
+
 
 /* Article */
 .article {
