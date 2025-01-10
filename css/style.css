@@ -134,6 +134,7 @@ body {
     padding: 0;
     align-items: center; /* Centraliza verticalmente os itens */
     margin-top: 100px;
+    margin-left: -20px;
 }
 
 .nav-menu .nav-link {
@@ -188,6 +189,7 @@ body {
         flex-wrap: wrap; /* Permite quebra de linha, se necessário */
         gap: 10px; /* Reduz o espaçamento entre os itens */
         margin-top: 20px;
+        margin-left: 0px;
     }
 }
 
